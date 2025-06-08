@@ -1,5 +1,4 @@
 <script setup>
-import BoxDemo from '@/components/BoxDemo.vue';
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -9,7 +8,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <BoxDemo />
       <nav>
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>

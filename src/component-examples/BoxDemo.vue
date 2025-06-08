@@ -1,6 +1,5 @@
 <template>
   <ExampleComponentUsage
-    :component="BoxDemo"
     :event-items="eventItems"
     :slot-items="slotItems"
     expand-props-table

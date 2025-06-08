@@ -4,6 +4,7 @@
     expand-props-table
     description="A simple box component"
   >
+    sdfsdfsdf
     <SimpleTest
       :text="text"
       :message="message"

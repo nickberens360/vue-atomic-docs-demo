@@ -4,20 +4,20 @@
       class="custom-box"
       @click="handleClick"
     >
-      {{ title }}
+      {{ title }} sdfsdfsfd
       <slot />
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import {computed, onUpdated} from 'vue';
 
 // Define props with default values
 const props = withDefaults(defineProps<{
   title?: string;
-  height: string;
-  width: string;
-  bgColor: string;
+  height?: string;
+  width?: string;
+  bgColor?: string;
   borderRadius?: string;
 }>(), {
   title: 'Box',
@@ -44,6 +44,12 @@ const boxStyle = computed(() => ({
   backgroundColor: props.bgColor,
   borderRadius: props.borderRadius,
 }));
+
+onUpdated(() => {
+  console.log('Box updated');
+});
+
+
 </script>
 
 <style scoped>

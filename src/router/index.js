@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import { routes as componentDocRoutes } from 'vue-component-docs-plugin';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,13 +18,11 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '',
-      children: componentDocRoutes,
-      meta: {
-        pageTitle: 'Foxy Docs'
-      }
-    },
-  ]
+      path: '/component-docs/:pathMatch(.*)*',
+      name: 'componentDocsHandler',
+      component: { render: () => null } // Empty component
+    }
+  ],
 })
 
 export default router

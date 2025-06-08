@@ -16,7 +16,7 @@ export function registerPlugins (app: App) {
     .use(router)
     .use(componentDocs as any, {
           componentModules: import.meta.glob('@/components/**/*.vue'),
-          rawComponentSourceModules: import.meta.glob('@/components/**/*.vue', { query: '?raw', import: 'default' }),
+          // rawComponentSourceModules: import.meta.glob('@/components/**/*.vue', { query: '?raw', import: 'default' }),
           exampleModules: import.meta.glob('@/component-examples/**/*.vue'),
           componentsDirName: 'components',
           examplesDirName: 'component-examples',
