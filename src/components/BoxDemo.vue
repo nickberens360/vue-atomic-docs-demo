@@ -1,55 +1,56 @@
 <template>
-    <div
-      :style="boxStyle"
-      class="custom-box"
-      @click="handleClick"
-    >
-      {{ title }} sdfsdfsfd
-      <slot />
-    </div>
+  <div
+    :style="boxStyle"
+    class="custom-box"
+    @click="handleClick"
+  >
+    {{ title }}
+    <slot />
+  </div>
 </template>
 
-<script setup lang="ts">
-import {computed, onUpdated} from 'vue';
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      default: 'Box'
+    },
+    height: {
+      type: String,
+      default: '150px'
+    },
+    width: {
+      type: String,
+      default: '150px'
+    },
+    bgColor: {
+      type: String,
+      default: '#ff0000'
+    },
+    borderRadius: {
+      type: String,
+      default: '8px'
+    },
+  },
 
-// Define props with default values
-const props = withDefaults(defineProps<{
-  title?: string;
-  height?: string;
-  width?: string;
-  bgColor?: string;
-  borderRadius?: string;
-}>(), {
-  title: 'Box',
-  height: '150px',
-  width: '150px',
-  bgColor: '#ff0000',
-  borderRadius: '8px',
-});
+  computed: {
+    boxStyle() {
+      return {
+        width: this.width,
+        height: this.height,
+        backgroundColor: this.bgColor,
+        borderRadius: this.borderRadius,
+      };
+    }
+  },
 
-// Define the emit event
-const emit = defineEmits<{
-  (e: 'box-clicked'): void;
-}>();
-
-// Handle the click event
-const handleClick = () => {
-  emit('box-clicked');
+  methods: {
+    handleClick() {
+      this.$emit('box-clicked');
+    }
+  },
 };
-
-// Computed style for the box
-const boxStyle = computed(() => ({
-  width: props.width,
-  height: props.height,
-  backgroundColor: props.bgColor,
-  borderRadius: props.borderRadius,
-}));
-
-onUpdated(() => {
-  console.log('Box updated');
-});
-
-
 </script>
 
 <style scoped>

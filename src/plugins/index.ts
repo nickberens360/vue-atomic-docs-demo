@@ -6,7 +6,7 @@
 
 // Plugins
 import router from '../router/index'
-import componentDocs from 'vue-component-docs-plugin'
+import componentDocs from 'vue-atomic-docs'
 
 // Types
 import type { App, Plugin } from 'vue'

@@ -68,7 +68,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import BoxDemo from "../components/BoxDemo.vue";
-import {DocsSlider, DocsMenu, DocsChip, DocsColorPicker } from "vue-component-docs-plugin";
+import {DocsSlider, DocsMenu, DocsChip, DocsColorPicker } from "vue-atomic-docs";
 
 const height = ref(150);
 const width = ref(150);
