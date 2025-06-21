@@ -1,14 +1,8 @@
-# vue-simple-project
+# vue-atomic-docs-demo
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Demo project for the npm package vue-atomic-docs.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+Check out the npm package here: https://www.npmjs.com/package/vue-atomic-docs
 
 ## Project Setup
 
