@@ -87,7 +87,7 @@ const slotItems = [
   {
     name: 'default',
     content: 'null',
-    description: 'Slot for custom actions.',
+    description: 'Slot for custom content.',
   },
 ];
 

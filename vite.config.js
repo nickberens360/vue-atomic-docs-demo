@@ -4,14 +4,14 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import pkg from 'vue-atomic-docs';
-const { atomicDocsVitePlugin } = pkg;
+// const { atomicDocsVitePlugin } = pkg;
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    atomicDocsVitePlugin(),
+    // atomicDocsVitePlugin(),
   ],
   resolve: {
     alias: {

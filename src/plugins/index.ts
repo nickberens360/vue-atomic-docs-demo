@@ -5,7 +5,7 @@
  */
 
 // Plugins
-import router from '../router/index'
+import router from '../router/index.js'
 import componentDocs from 'vue-atomic-docs'
 
 // Types
