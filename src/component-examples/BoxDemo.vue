@@ -96,9 +96,3 @@ const handleClick = () => {
 };
 
 </script>
-<style scoped>
-.color-chip {
-  display: flex;
-  justify-content: center;
-}
-</style>

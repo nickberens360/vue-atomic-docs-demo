@@ -1,9 +1,12 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    Hi
+    <SimpleTest />
   </main>
 </template>
+<script
+  setup
+  lang="ts"
+>
+import SimpleTest from "@/components/SimpleTest.vue";
+</script>
