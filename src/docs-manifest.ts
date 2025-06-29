@@ -56,3 +56,22 @@ export const exampleComponents: ExampleItem[] = [
     "importer": () => import('./component-examples/AtomicDocsSetupSteps/Step1Install.vue')
   }
 ];
+
+
+// Pre-computed module mappings for direct use with the plugin
+export const componentModules: Record<string, () => Promise<any>> = components.reduce((acc, comp) => {
+  acc[comp.relativePath] = comp.importer;
+  return acc;
+}, {});
+
+export const rawComponentSourceModules: Record<string, () => Promise<string>> = components.reduce((acc, comp) => {
+  if (comp.rawImporter) {
+    acc[comp.relativePath] = comp.rawImporter;
+  }
+  return acc;
+}, {});
+
+export const exampleModules: Record<string, () => Promise<any>> = exampleComponents.reduce((acc, example) => {
+  acc[example.relativePath] = example.importer;
+  return acc;
+}, {});
