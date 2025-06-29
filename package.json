@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-docs-manifest": "node ./node_modules/vue-atomic-docs/src/scripts/generate-docs-manifest.js"
   },
   "dependencies": {
     "vue": "^3.5.13",
-    "vue-atomic-docs": "^2.2.2",
+    "vue-atomic-docs": "^2.5.4-alpha.0",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
