@@ -3,10 +3,11 @@
     expand-props-table
     description="A simple box component"
   >
+    sdf
     <TestComponent />
   </ExampleComponentUsage>
 </template>
 <script setup lang="ts">
-import TestComponent from "@/components/provided-components/TestComponent.vue";
+import TestComponent from "@/components/ProvidedComponents/TestComponent.vue";
 
 </script>
