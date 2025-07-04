@@ -19,5 +19,12 @@ const markdownFileContent = `
     examplesDirName: 'component-examples'
 })
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+examplesDirName: string
+\`\`\`
+
+The name of the directory where your component examples are stored (e.g., 'component-examples'). This helps vue-atomic-docs locate and organize your component examples in the documentation.
 `;
 </script>

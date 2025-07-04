@@ -19,5 +19,12 @@ const markdownFileContent = `
     enableDocs: import.meta.env.VITE_ENABLE_ATOMIC_DOCS === 'true'
 })
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+enableDocs: boolean
+\`\`\`
+
+A boolean flag that determines whether the documentation system is enabled or disabled. This is useful for toggling documentation in different environments (development vs. production).
 `;
 </script>

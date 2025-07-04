@@ -48,5 +48,14 @@ colors: [
     },
 ],
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+colors: Array<{name: string, color: string}>
+\`\`\`
+
+Each color object requires:
+- \`name\`: String - The name of the color (e.g., 'primary')
+- \`color\`: String - The color value (hex code, e.g., '#1976d2')
 `;
 </script>

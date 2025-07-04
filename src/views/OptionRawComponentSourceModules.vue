@@ -20,5 +20,14 @@ const markdownFileContent = `
     rawComponentSourceModules: import.meta.glob('@/components/**/*.vue', {query: '?raw', import: 'default'})
 })
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+rawComponentSourceModules: Record<string, () => Promise<string>>
+\`\`\`
+
+This is typically the result of \`import.meta.glob('@/components/**/*.vue', {query: '?raw', import: 'default'})\`, which creates an object where:
+- Keys are file paths (string)
+- Values are dynamic import functions that return a Promise resolving to the raw source code as a string
 `;
 </script>

@@ -19,5 +19,12 @@ const markdownFileContent = `
     autoExtractColors: true
 })
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+autoExtractColors: boolean
+\`\`\`
+
+When set to \`true\`, vue-atomic-docs will automatically analyze your components and extract color information to display in the documentation.
 `;
 </script>

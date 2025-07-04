@@ -27,5 +27,28 @@ customRoutes: [
     }
 ]
 \`\`\`
+
+### Type Definition
+\`\`\`typescript
+customRoutes: Array<{
+  path: string,
+  name: string,
+  component: () => Promise<any>,
+  meta: {
+    section: string,
+    title: string,
+    icon: string
+  }
+}>
+\`\`\`
+
+Each route object requires:
+- \`path\`: String - The URL path for the route (e.g., 'my-custom-page')
+- \`name\`: String - The route name (e.g., 'my-custom-page')
+- \`component\`: Function - A function that returns a dynamic import of the component
+- \`meta\`: Object - Contains metadata for the route:
+  - \`section\`: String - The section name in the navigation (e.g., 'Custom Section')
+  - \`title\`: String - The display title (e.g., 'My Custom Page')
+  - \`icon\`: String - An emoji or icon for the route (e.g., '🚀')
 `;
 </script>
