@@ -8,10 +8,6 @@
 import router from '../router/index.js'
 import componentDocs from 'vue-atomic-docs'
 
-// Import your generated manifest file
-// The path should match where your script generates the file
-import { componentModules, rawComponentSourceModules, exampleModules } from '../docs-manifest.ts';
-
 // Types
 import type { App } from 'vue'
 
@@ -19,9 +15,9 @@ export function registerPlugins(app: App) {
     app
         .use(router)
         .use(componentDocs as any, {
-            componentModules,
-            rawComponentSourceModules,
-            exampleModules,
+            componentModules: import.meta.glob('@/components/**/*.vue'),
+            rawComponentSourceModules: import.meta.glob('@/components/**/*.vue', {query: '?raw', import: 'default'}),
+            exampleModules: import.meta.glob('@/component-examples/**/*.vue'),
             componentsDirName: 'components',
             examplesDirName: 'component-examples',
             mainAppID: 'app',
@@ -29,6 +25,29 @@ export function registerPlugins(app: App) {
             componentFont: 'Times, serif',
             autoExtractColors: true,
             autoExtractTypography: true,
+            typography: [
+                {
+                    name: 'Headline 1',
+                    fontFamily: '"Roboto", sans-serif',
+                    fontSize: '2.5rem',
+                    fontWeight: '700',
+                    lineHeight: '1.5',
+                },
+                {
+                    name: 'Body Text',
+                    fontFamily: '"Open Sans", sans-serif',
+                    fontSize: '1rem',
+                    fontWeight: '400',
+                    lineHeight: '1.6',
+                },
+                {
+                    name: 'Caption',
+                    fontFamily: '"Lato", sans-serif',
+                    fontSize: '0.875rem',
+                    fontWeight: '400',
+                    lineHeight: '1.4',
+                },
+            ],
             colors: [
                 {
                     name: 'primary',
