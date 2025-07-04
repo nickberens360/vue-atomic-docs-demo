@@ -26,10 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 componentModules: Record<string, () => Promise<any>>
 \`\`\`
-
-This is typically the result of \`import.meta.glob('@/components/**/*.vue')\`, which creates an object where:
-- Keys are file paths (string)
-- Values are dynamic import functions that return a Promise
 `;
 
 // Define headers for the data table

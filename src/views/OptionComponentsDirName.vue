@@ -26,8 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 componentsDirName: string
 \`\`\`
-
-The name of the directory where your Vue components are stored (e.g., 'components'). This helps vue-atomic-docs locate and organize your components in the documentation.
 `;
 
 // Define headers for the data table

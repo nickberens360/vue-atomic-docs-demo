@@ -26,8 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 autoExtractTypography: boolean
 \`\`\`
-
-When set to \`true\`, vue-atomic-docs will automatically analyze your components and extract typography information such as font families, sizes, and weights to display in the documentation.
 `;
 
 // Define headers for the data table

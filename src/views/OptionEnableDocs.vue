@@ -26,8 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 enableDocs: boolean
 \`\`\`
-
-A boolean flag that determines whether the documentation system is enabled or disabled. This is useful for toggling documentation in different environments (development vs. production).
 `;
 
 // Define headers for the data table

@@ -26,8 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 componentFont: string
 \`\`\`
-
-A string specifying the default font family used for components in the documentation (e.g., 'Times, serif'). This helps maintain consistent typography throughout your component documentation.
 `;
 
 // Define headers for the data table

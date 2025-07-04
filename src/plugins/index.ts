@@ -9,7 +9,7 @@ import router from '../router/index.js'
 import componentDocs from 'vue-atomic-docs'
 
 // Types
-import type { App } from 'vue'
+import type {App} from 'vue'
 
 export function registerPlugins(app: App) {
     app
@@ -211,6 +211,16 @@ export function registerPlugins(app: App) {
                         section: 'Options',
                         title: 'Typography',
                         icon: '🖋️',
+                    }
+                },
+                {
+                    path: 'options/plugins',
+                    name: 'optionPlugins',
+                    component: () => import('@/views/OptionPlugins.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Plugins',
+                        icon: '🔌',
                     }
                 }
             ]

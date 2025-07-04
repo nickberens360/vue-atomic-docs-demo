@@ -54,13 +54,6 @@ typography: Array<{
   lineHeight: string
 }>
 \`\`\`
-
-Each typography object requires:
-- \`name\`: String - The name of the typography style (e.g., 'Headline 1')
-- \`fontFamily\`: String - The font family (e.g., '"Roboto", sans-serif')
-- \`fontSize\`: String - The font size (e.g., '2.5rem')
-- \`fontWeight\`: String - The font weight (e.g., '700')
-- \`lineHeight\`: String - The line height (e.g., '1.5')
 `;
 
 // Define headers for the data table

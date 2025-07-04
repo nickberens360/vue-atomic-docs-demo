@@ -13,21 +13,27 @@
 import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`javascript
+// import fontawesome from '@/plugins/fontawesome';
+// import vuetify from '@/plugins/vuetify';
+// import store from '@/store/vuex';
+// import filters from '@/plugins/filters';
+// import componentDocs from 'vue-atomic-docs';
+
+.use(componentDocs, {
 // other options...
-plugins: [
-  vuetify,
-  filters,
-  store,
-  fontawesome,
-],
+  plugins: [
+    vuetify,
+    filters,
+    store,
+    fontawesome,
+  ],
+}
 \`\`\`
 
 ### Type Definition
 \`\`\`typescript
 plugins: Array<Plugin>
 \`\`\`
-
-This allows your components in the documentation to have access to the same plugins, filters, and stores that your main application uses, ensuring consistent behavior and appearance.
 `;
 
 // Define headers for the data table

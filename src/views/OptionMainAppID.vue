@@ -26,8 +26,6 @@ const markdownFileContent = `
 \`\`\`typescript
 mainAppID: string
 \`\`\`
-
-The ID of the main app element in your HTML (e.g., 'app'). This helps vue-atomic-docs integrate properly with your application's DOM structure.
 `;
 
 // Define headers for the data table
