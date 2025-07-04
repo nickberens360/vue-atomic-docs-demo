@@ -81,6 +81,28 @@ export function registerPlugins(app: App) {
                     name: 'warning',
                     color: '#fb8c00',
                 },
+            ],
+            customRoutes: [
+                {
+                    path: '/options/option-custom-routes', // URL will be /atomic-docs/my-custom-page
+                    name: 'optionCustomRoutes', // Name used for navigation and programmatic routing
+                    component: () => import('@/views/OptionCustomRoutes.vue'),
+                    meta: {
+                        section: 'Options', // Groups this link under the "Documentation" header
+                        title: 'Custom Routes',    // The user-friendly display name
+                        icon: '🚀',
+                    }
+                },
+                {
+                    path: 'options/colors',
+                    name: 'optionColors',
+                    component: () => import('@/views/OptionColors.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Colors',
+                        icon: '🎨',
+                    }
+                }
             ]
         })
 }
