@@ -84,7 +84,7 @@ export function registerPlugins(app: App) {
             ],
             customRoutes: [
                 {
-                    path: '/options/option-custom-routes',
+                    path: 'options/option-custom-routes',
                     name: 'optionCustomRoutes',
                     component: () => import('@/views/OptionCustomRoutes.vue'),
                     meta: {
