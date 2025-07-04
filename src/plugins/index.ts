@@ -84,12 +84,12 @@ export function registerPlugins(app: App) {
             ],
             customRoutes: [
                 {
-                    path: '/options/option-custom-routes', // URL will be /atomic-docs/my-custom-page
-                    name: 'optionCustomRoutes', // Name used for navigation and programmatic routing
+                    path: '/options/option-custom-routes',
+                    name: 'optionCustomRoutes',
                     component: () => import('@/views/OptionCustomRoutes.vue'),
                     meta: {
-                        section: 'Options', // Groups this link under the "Documentation" header
-                        title: 'Custom Routes',    // The user-friendly display name
+                        section: 'Options',
+                        title: 'Custom Routes',
                         icon: '🚀',
                     }
                 },
@@ -101,6 +101,116 @@ export function registerPlugins(app: App) {
                         section: 'Options',
                         title: 'Colors',
                         icon: '🎨',
+                    }
+                },
+                {
+                    path: 'options/component-modules',
+                    name: 'optionComponentModules',
+                    component: () => import('@/views/OptionComponentModules.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Component Modules',
+                        icon: '📦',
+                    }
+                },
+                {
+                    path: 'options/raw-component-source-modules',
+                    name: 'optionRawComponentSourceModules',
+                    component: () => import('@/views/OptionRawComponentSourceModules.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Raw Component Source',
+                        icon: '📄',
+                    }
+                },
+                {
+                    path: 'options/example-modules',
+                    name: 'optionExampleModules',
+                    component: () => import('@/views/OptionExampleModules.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Example Modules',
+                        icon: '🔍',
+                    }
+                },
+                {
+                    path: 'options/components-dir-name',
+                    name: 'optionComponentsDirName',
+                    component: () => import('@/views/OptionComponentsDirName.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Components Directory',
+                        icon: '📁',
+                    }
+                },
+                {
+                    path: 'options/examples-dir-name',
+                    name: 'optionExamplesDirName',
+                    component: () => import('@/views/OptionExamplesDirName.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Examples Directory',
+                        icon: '📂',
+                    }
+                },
+                {
+                    path: 'options/main-app-id',
+                    name: 'optionMainAppID',
+                    component: () => import('@/views/OptionMainAppID.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Main App ID',
+                        icon: '🆔',
+                    }
+                },
+                {
+                    path: 'options/enable-docs',
+                    name: 'optionEnableDocs',
+                    component: () => import('@/views/OptionEnableDocs.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Enable Docs',
+                        icon: '✅',
+                    }
+                },
+                {
+                    path: 'options/component-font',
+                    name: 'optionComponentFont',
+                    component: () => import('@/views/OptionComponentFont.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Component Font',
+                        icon: '🔤',
+                    }
+                },
+                {
+                    path: 'options/auto-extract-colors',
+                    name: 'optionAutoExtractColors',
+                    component: () => import('@/views/OptionAutoExtractColors.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Auto Extract Colors',
+                        icon: '🌈',
+                    }
+                },
+                {
+                    path: 'options/auto-extract-typography',
+                    name: 'optionAutoExtractTypography',
+                    component: () => import('@/views/OptionAutoExtractTypography.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Auto Extract Typography',
+                        icon: '📝',
+                    }
+                },
+                {
+                    path: 'options/typography',
+                    name: 'optionTypography',
+                    component: () => import('@/views/OptionTypography.vue'),
+                    meta: {
+                        section: 'Options',
+                        title: 'Typography',
+                        icon: '🖋️',
                     }
                 }
             ]
