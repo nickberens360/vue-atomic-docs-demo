@@ -6,10 +6,12 @@
       This helps vue-atomic-docs locate and organize your component examples in the documentation.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="examplesDirNameProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
 // import componentDocs from 'vue-atomic-docs';
@@ -27,4 +29,22 @@ examplesDirName: string
 
 The name of the directory where your component examples are stored (e.g., 'component-examples'). This helps vue-atomic-docs locate and organize your component examples in the documentation.
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the examplesDirName properties data
+const examplesDirNameProperties = [
+  {
+    property: 'examplesDirName',
+    type: 'String',
+    required: 'No',
+    description: 'The name of the directory where your component examples are stored (e.g., \'component-examples\')'
+  }
+];
 </script>

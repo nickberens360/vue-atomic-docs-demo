@@ -6,10 +6,12 @@
       configuration.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="colorProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`javascript
 // other options...
@@ -58,4 +60,28 @@ Each color object requires:
 - \`name\`: String - The name of the color (e.g., 'primary')
 - \`color\`: String - The color value (hex code, e.g., '#1976d2')
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the color properties data
+const colorProperties = [
+  {
+    property: 'name',
+    type: 'String',
+    required: 'Yes',
+    description: 'The name of the color (e.g., \'primary\', \'secondary\')'
+  },
+  {
+    property: 'color',
+    type: 'String',
+    required: 'Yes',
+    description: 'The color value in hex format (e.g., \'#1976d2\')'
+  }
+];
 </script>

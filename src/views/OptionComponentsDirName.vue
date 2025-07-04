@@ -6,10 +6,12 @@
       This helps vue-atomic-docs locate and organize your components in the documentation.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="componentsDirNameProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
 // import componentDocs from 'vue-atomic-docs';
@@ -27,4 +29,22 @@ componentsDirName: string
 
 The name of the directory where your Vue components are stored (e.g., 'components'). This helps vue-atomic-docs locate and organize your components in the documentation.
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the componentsDirName properties data
+const componentsDirNameProperties = [
+  {
+    property: 'componentsDirName',
+    type: 'String',
+    required: 'No',
+    description: 'The name of the directory where your Vue components are stored (e.g., \'components\')'
+  }
+];
 </script>

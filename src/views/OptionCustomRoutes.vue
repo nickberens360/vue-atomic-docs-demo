@@ -58,6 +58,7 @@ ${typeDefinitionCode}`;
 const headers = [
   { title: 'Property', key: 'property' },
   { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
   { title: 'Description', key: 'description' }
 ];
 
@@ -67,31 +68,37 @@ const routeProperties = [
   {
     property: 'path',
     type: 'String',
+    required: 'Yes',
     description: 'The URL path for the route (e.g., \'my-custom-page\')'
   },
   {
     property: 'name',
     type: 'String',
+    required: 'Yes',
     description: 'The route name (e.g., \'my-custom-page\')'
   },
   {
     property: 'component',
     type: 'Function',
+    required: 'Yes',
     description: 'A function that returns a dynamic import of the component'
   },
   {
     property: 'meta.section',
     type: 'String',
+    required: 'Yes',
     description: 'The section name in the navigation (e.g., \'Custom Section\')'
   },
   {
     property: 'meta.title',
     type: 'String',
+    required: 'Yes',
     description: 'The display title (e.g., \'My Custom Page\')'
   },
   {
     property: 'meta.icon',
     type: 'String',
+    required: 'No',
     description: 'An emoji or icon for the route (e.g., \'🚀\')'
   }
 ];

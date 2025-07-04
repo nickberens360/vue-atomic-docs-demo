@@ -6,10 +6,12 @@
       When enabled, vue-atomic-docs will analyze your components and extract color information to display in the documentation.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="autoExtractColorsProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
 // import componentDocs from 'vue-atomic-docs';
@@ -27,4 +29,22 @@ autoExtractColors: boolean
 
 When set to \`true\`, vue-atomic-docs will automatically analyze your components and extract color information to display in the documentation.
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the autoExtractColors properties data
+const autoExtractColorsProperties = [
+  {
+    property: 'autoExtractColors',
+    type: 'Boolean',
+    required: 'No',
+    description: 'When set to true, automatically analyzes components and extracts color information to display in the documentation.'
+  }
+];
 </script>

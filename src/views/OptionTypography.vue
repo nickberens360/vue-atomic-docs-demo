@@ -6,10 +6,12 @@
       You can specify different text styles with properties like font family, size, weight, and line height.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="typographyProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
 // import componentDocs from 'vue-atomic-docs';
@@ -60,4 +62,46 @@ Each typography object requires:
 - \`fontWeight\`: String - The font weight (e.g., '700')
 - \`lineHeight\`: String - The line height (e.g., '1.5')
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the typography properties data
+const typographyProperties = [
+  {
+    property: 'name',
+    type: 'String',
+    required: 'Yes',
+    description: 'The name of the typography style (e.g., \'Headline 1\')'
+  },
+  {
+    property: 'fontFamily',
+    type: 'String',
+    required: 'Yes',
+    description: 'The font family (e.g., \'"Roboto", sans-serif\')'
+  },
+  {
+    property: 'fontSize',
+    type: 'String',
+    required: 'Yes',
+    description: 'The font size (e.g., \'2.5rem\')'
+  },
+  {
+    property: 'fontWeight',
+    type: 'String',
+    required: 'Yes',
+    description: 'The font weight (e.g., \'700\')'
+  },
+  {
+    property: 'lineHeight',
+    type: 'String',
+    required: 'Yes',
+    description: 'The line height (e.g., \'1.5\')'
+  }
+];
 </script>

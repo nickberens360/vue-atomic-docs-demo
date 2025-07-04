@@ -7,10 +7,12 @@
       It uses Vite's <code>import.meta.glob</code> with the <code>?raw</code> query parameter.
     </p>
     <DocsMarkdown :content="markdownFileContent" />
+
+    <DocsDataTable :headers="headers" :items="rawComponentSourceModulesProperties" />
   </div>
 </template>
 <script setup lang="ts">
-import {DocsMarkdown} from "vue-atomic-docs";
+import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
 // import componentDocs from 'vue-atomic-docs';
@@ -30,4 +32,22 @@ This is typically the result of \`import.meta.glob('@/components/**/*.vue', {que
 - Keys are file paths (string)
 - Values are dynamic import functions that return a Promise resolving to the raw source code as a string
 `;
+
+// Define headers for the data table
+const headers = [
+  { title: 'Property', key: 'property' },
+  { title: 'Type', key: 'type' },
+  { title: 'Required', key: 'required' },
+  { title: 'Description', key: 'description' }
+];
+
+// Define the rawComponentSourceModules properties data
+const rawComponentSourceModulesProperties = [
+  {
+    property: 'rawComponentSourceModules',
+    type: 'Record<string, () => Promise<string>>',
+    required: 'No',
+    description: 'An object mapping file paths to dynamic import functions that load the raw source code of components as strings. Typically created using import.meta.glob() with the ?raw query parameter.'
+  }
+];
 </script>
