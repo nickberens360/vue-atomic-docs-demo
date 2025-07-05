@@ -14,7 +14,6 @@ import { DocsMarkdown } from "vue-atomic-docs";
 defineProps<{
   title: string
   markdownFileContent?: string,
-  markdownFileContentMDX?: string
 }>()
 </script>
 
