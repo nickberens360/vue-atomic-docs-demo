@@ -25,10 +25,4 @@ import { ref } from 'vue';
 import SimpleTest from "../components/SimpleTest.vue";
 const text = ref('Hello World');
 const message = ref('Yooooooo');
-
 </script>
-<style scoped>
-.box-demo-container {
-  display: flex;
-}
-</style>

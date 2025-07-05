@@ -2,7 +2,6 @@
   <ExampleComponentUsage
     :event-items="eventItems"
     :slot-items="slotItems"
-    expand-props-table
     description="A simple box component."
   >
     <div class="box-demo-container">
