@@ -7,6 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      redirect: '/atomic-docs',
       component: HomeView
     },
     ...(import.meta.env.VITE_ENABLE_ATOMIC_DOCS !== 'true' ? [] : [
