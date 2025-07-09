@@ -13,11 +13,11 @@
 import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`javascript
-// import fontawesome from '@/plugins/fontawesome';
-// import vuetify from '@/plugins/vuetify';
-// import store from '@/store/vuex';
-// import filters from '@/plugins/filters';
-// import componentDocs from 'vue-atomic-docs';
+import fontawesome from '@/plugins/fontawesome';
+import vuetify from '@/plugins/vuetify';
+import store from '@/store/vuex';
+import filters from '@/plugins/filters';
+import componentDocs from 'vue-atomic-docs';
 
 .use(componentDocs, {
 // other options...

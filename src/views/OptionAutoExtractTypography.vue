@@ -14,7 +14,7 @@
 import {DocsMarkdown, DocsDataTable} from "vue-atomic-docs";
 const markdownFileContent = `
 \`\`\`js
-// import componentDocs from 'vue-atomic-docs';
+import componentDocs from 'vue-atomic-docs';
 
 .use(componentDocs, {
     // other options...
