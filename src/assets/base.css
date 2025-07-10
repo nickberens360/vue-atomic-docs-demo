@@ -38,6 +38,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --base-font-size: 16px;
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
@@ -62,6 +63,7 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
+  font-size: var(--base-font-size, 16px);
   transition:
     color 0.5s,
     background-color 0.5s;
